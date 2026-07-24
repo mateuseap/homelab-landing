@@ -69,16 +69,17 @@ a:hover { text-decoration: underline; }
 .brand-mark { width: 30px; height: 30px; border-radius: 8px; display: block; }
 .brand-text { font-family: var(--mono); font-size: 0.95rem; letter-spacing: -0.01em; }
 .header-controls { display: flex; align-items: center; gap: 0.6rem; }
-.lang { display: flex; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 2px; }
+.lang { display: flex; align-items: center; height: 36px; box-sizing: border-box; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 2px; }
 .lang-btn {
+  display: inline-flex; align-items: center; justify-content: center; height: 100%; box-sizing: border-box;
   font-family: var(--mono); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.03em;
   border: 0; background: transparent; color: var(--muted); cursor: pointer;
-  padding: 0.3rem 0.6rem; border-radius: 999px; transition: color 0.2s, background 0.2s;
+  padding: 0 0.65rem; border-radius: 999px; transition: color 0.2s, background 0.2s;
 }
 .lang-btn[aria-current="true"] { background: var(--bg); color: var(--accent); box-shadow: 0 1px 2px rgba(0,0,0,0.08); }
 .icon-btn {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 36px; height: 36px; border-radius: 10px;
+  width: 36px; height: 36px; box-sizing: border-box; border-radius: 10px;
   border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer;
 }
 .icon-btn:hover { color: var(--accent); }
