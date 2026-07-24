@@ -62,7 +62,7 @@
     "m4d": "A nightly database dump to Cloudflare R2 with guardrails that keep it inside the free tier."
   },
   "footer": {
-    "by": "Built and operated by Mateus Elias",
+    "by": "Built and operated by mateuseap",
     "portfolio": "Portfolio",
     "docs": "Docs"
   }
