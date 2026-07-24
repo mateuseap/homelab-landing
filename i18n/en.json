@@ -1,0 +1,68 @@
+{
+  "skip": "Skip to content",
+  "hero": {
+    "eyebrow": "GitOps homelab",
+    "title": "One VPS, declared in git.",
+    "lead": "A GitOps Kubernetes platform running real production apps on a single 1 vCPU / 4 GB node. Everything is declared in one repository; ArgoCD keeps the cluster matching it.",
+    "repo": "View the repo",
+    "argo": "ArgoCD",
+    "grafana": "Grafana",
+    "s1": "single node",
+    "s2": "GitOps",
+    "s3": "production apps",
+    "s4": "declarative"
+  },
+  "arch": {
+    "title": "Architecture",
+    "lead": "Merge to the git repository is the only deploy action. ArgoCD reconciles the cluster; Traefik terminates TLS and routes every hostname; cert-manager issues certificates automatically."
+  },
+  "infra": {
+    "title": "Infrastructure",
+    "c1t": "Single-node k3s",
+    "c1d": "Lightweight Kubernetes with Traefik, CoreDNS, and local-path storage in one binary. No etcd, state in sqlite.",
+    "c2t": "Hardened host",
+    "c2d": "SSH key-only, fail2ban, a firewalled node-exporter, and 2 GB swap. The host hardening is part of the bootstrap script.",
+    "c3t": "Reproducible",
+    "c3d": "One script turns a fresh VPS into the full platform. Migrating machines takes about thirty minutes."
+  },
+  "tech": {
+    "title": "Technologies",
+    "lead": "Every layer is open source and declared in the repository.",
+    "items": {
+      "k3s": "Lightweight Kubernetes",
+      "argocd": "GitOps engine",
+      "certmanager": "Automatic TLS",
+      "sealed": "Encrypted secrets in git",
+      "traefik": "Ingress and routing",
+      "prometheus": "Metrics and scraping",
+      "grafana": "Dashboards",
+      "r2": "Backup storage",
+      "docker": "Container images",
+      "ghcr": "Image registry",
+      "actions": "CI and image builds",
+      "letsencrypt": "Free certificates"
+    }
+  },
+  "svc": {
+    "title": "Services running on it",
+    "chess": "Real-time multiplayer chess with Stockfish analysis and Glicko-2 ratings.",
+    "pixel": "A Gather-style 2D world with movement, proximity chat, and proximity voice.",
+    "argo": "The GitOps control plane and a live dashboard of every deployed app.",
+    "grafana": "The curated Homelab Overview dashboard, node health to per-app metrics."
+  },
+  "mon": {
+    "title": "Monitoring and networking",
+    "m1t": "Monitoring",
+    "m1d": "One curated Grafana dashboard in four sections (VPS, Kubernetes, ChessKernel, PixelHub). Both app servers expose cluster-internal metrics scraped by Prometheus every minute.",
+    "m2t": "Networking",
+    "m2d": "One wildcard DNS record serves any number of hosts. Traefik routes by hostname (SNI) and cert-manager issues a Let's Encrypt certificate per host automatically.",
+    "m3t": "Security",
+    "m3d": "Secrets are sealed and safe in a public repo, TLS is everywhere, and the metrics endpoints are never exposed publicly.",
+    "m4t": "Backups",
+    "m4d": "A nightly database dump to Cloudflare R2 with guardrails that keep it inside the free tier."
+  },
+  "footer": {
+    "by": "Built and operated by Mateus Elias",
+    "portfolio": "Portfolio"
+  }
+}

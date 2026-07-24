@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Homelab: one VPS, declared in git</title>
+    <meta name="description" content="A GitOps Kubernetes platform running real production apps on a single 1 vCPU / 4 GB node. k3s, ArgoCD, cert-manager, Prometheus, and Grafana, all declared in one git repository." />
+    <meta name="theme-color" content="#0f7a63" />
+    <link rel="canonical" href="https://homelab.mateuseap.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Homelab: one VPS, declared in git" />
+    <meta property="og:description" content="A GitOps Kubernetes platform running real production apps on a single small VPS." />
+    <meta property="og:url" content="https://homelab.mateuseap.com" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="mateuseap homelab">
+        <svg class="brand-mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="mateuseap">
+          <rect width="64" height="64" rx="15" fill="#0f7a63" />
+          <path d="M15 47V19h6.5L32 34l10.5-15H49v28h-7.2V31.5L32 45l-9.8-13.5V47z" fill="#fff" />
+        </svg>
+        <span class="brand-text">homelab</span>
+      </a>
+      <div class="header-controls">
+        <div class="lang" role="group" aria-label="Language">
+          <button data-lang="en" class="lang-btn" type="button">EN</button>
+          <button data-lang="pt-BR" class="lang-btn" type="button">PT</button>
+          <button data-lang="es" class="lang-btn" type="button">ES</button>
+        </div>
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle theme">
+          <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19"/></g></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <p class="eyebrow" data-i18n="hero.eyebrow">GitOps homelab</p>
+        <h1 data-i18n="hero.title">One VPS, declared in git.</h1>
+        <p class="lead" data-i18n="hero.lead">A GitOps Kubernetes platform running real production apps on a single 1 vCPU / 4 GB node. Everything is declared in one repository; ArgoCD keeps the cluster matching it.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://github.com/mateuseap/homelab" target="_blank" rel="noopener" data-i18n="hero.repo">View the repo</a>
+          <a class="btn" href="https://argo.lab.mateuseap.com" target="_blank" rel="noopener" data-i18n="hero.argo">ArgoCD</a>
+          <a class="btn" href="https://grafana.lab.mateuseap.com" target="_blank" rel="noopener" data-i18n="hero.grafana">Grafana</a>
+        </div>
+        <ul class="stat-row">
+          <li><strong>1 vCPU / 4 GB</strong><span data-i18n="hero.s1">single node</span></li>
+          <li><strong>k3s + ArgoCD</strong><span data-i18n="hero.s2">GitOps</span></li>
+          <li><strong>2</strong><span data-i18n="hero.s3">production apps</span></li>
+          <li><strong>100%</strong><span data-i18n="hero.s4">declarative</span></li>
+        </ul>
+      </section>
+
+      <section class="reveal" id="architecture">
+        <h2 data-i18n="arch.title">Architecture</h2>
+        <p class="section-lead" data-i18n="arch.lead">Merge to the git repository is the only deploy action. ArgoCD reconciles the cluster; Traefik terminates TLS and routes every hostname; cert-manager issues certificates automatically.</p>
+        <div class="diagram" id="diagram"></div>
+      </section>
+
+      <section class="reveal" id="infrastructure">
+        <h2 data-i18n="infra.title">Infrastructure</h2>
+        <div class="cards">
+          <article class="card"><h3 data-i18n="infra.c1t">Single-node k3s</h3><p data-i18n="infra.c1d">Lightweight Kubernetes with Traefik, CoreDNS, and local-path storage in one binary. No etcd, state in sqlite.</p></article>
+          <article class="card"><h3 data-i18n="infra.c2t">Hardened host</h3><p data-i18n="infra.c2d">SSH key-only, fail2ban, a firewalled node-exporter, and 2 GB swap. The host hardening is part of the bootstrap script.</p></article>
+          <article class="card"><h3 data-i18n="infra.c3t">Reproducible</h3><p data-i18n="infra.c3d">One script turns a fresh VPS into the full platform. Migrating machines takes about thirty minutes.</p></article>
+        </div>
+      </section>
+
+      <section class="reveal" id="technologies">
+        <h2 data-i18n="tech.title">Technologies</h2>
+        <p class="section-lead" data-i18n="tech.lead">Every layer is open source and declared in the repository.</p>
+        <div class="tech-grid" id="tech-grid"></div>
+      </section>
+
+      <section class="reveal" id="services">
+        <h2 data-i18n="svc.title">Services running on it</h2>
+        <div class="cards">
+          <article class="card svc"><div class="svc-head"><h3>ChessKernel</h3><a href="https://chesskernel.com" target="_blank" rel="noopener" class="ext">chesskernel.com</a></div><p data-i18n="svc.chess">Real-time multiplayer chess with Stockfish analysis and Glicko-2 ratings.</p></article>
+          <article class="card svc"><div class="svc-head"><h3>PixelHub</h3><a href="https://pixelhub.lab.mateuseap.com" target="_blank" rel="noopener" class="ext">pixelhub.lab</a></div><p data-i18n="svc.pixel">A Gather-style 2D world with movement, proximity chat, and proximity voice.</p></article>
+          <article class="card svc"><div class="svc-head"><h3>ArgoCD</h3><a href="https://argo.lab.mateuseap.com" target="_blank" rel="noopener" class="ext">argo.lab</a></div><p data-i18n="svc.argo">The GitOps control plane and a live dashboard of every deployed app.</p></article>
+          <article class="card svc"><div class="svc-head"><h3>Grafana</h3><a href="https://grafana.lab.mateuseap.com" target="_blank" rel="noopener" class="ext">grafana.lab</a></div><p data-i18n="svc.grafana">The curated Homelab Overview dashboard, node health to per-app metrics.</p></article>
+        </div>
+      </section>
+
+      <section class="reveal" id="observability">
+        <h2 data-i18n="mon.title">Monitoring and networking</h2>
+        <div class="split">
+          <div class="card"><h3 data-i18n="mon.m1t">Monitoring</h3><p data-i18n="mon.m1d">One curated Grafana dashboard in four sections (VPS, Kubernetes, ChessKernel, PixelHub). Both app servers expose cluster-internal metrics scraped by Prometheus every minute.</p></div>
+          <div class="card"><h3 data-i18n="mon.m2t">Networking</h3><p data-i18n="mon.m2d">One wildcard DNS record serves any number of hosts. Traefik routes by hostname (SNI) and cert-manager issues a Let's Encrypt certificate per host automatically.</p></div>
+          <div class="card"><h3 data-i18n="mon.m3t">Security</h3><p data-i18n="mon.m3d">Secrets are sealed and safe in a public repo, TLS is everywhere, and the metrics endpoints are never exposed publicly.</p></div>
+          <div class="card"><h3 data-i18n="mon.m4t">Backups</h3><p data-i18n="mon.m4d">A nightly database dump to Cloudflare R2 with guardrails that keep it inside the free tier.</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#0f7a63" /><path d="M15 47V19h6.5L32 34l10.5-15H49v28h-7.2V31.5L32 45l-9.8-13.5V47z" fill="#fff" /></svg>
+        <span data-i18n="footer.by">Built and operated by Mateus Elias</span>
+      </div>
+      <nav class="footer-links">
+        <a href="https://mateuseap.github.io" target="_blank" rel="noopener" data-i18n="footer.portfolio">Portfolio</a>
+        <a href="https://blog.mateuseap.com" target="_blank" rel="noopener">Blog</a>
+        <a href="https://github.com/mateuseap" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
