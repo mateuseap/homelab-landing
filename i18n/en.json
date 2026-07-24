@@ -14,7 +14,7 @@
   },
   "arch": {
     "title": "Architecture",
-    "lead": "Merge to the git repository is the only deploy action. ArgoCD reconciles the cluster; Traefik terminates TLS and routes every hostname; cert-manager issues certificates automatically."
+    "lead": "Merge to the git repository is the only deploy action. ArgoCD watches it and self-heals the cluster to match; Traefik terminates TLS and routes every hostname; cert-manager issues certificates automatically."
   },
   "infra": {
     "title": "Infrastructure",
@@ -63,6 +63,7 @@
   },
   "footer": {
     "by": "Built and operated by Mateus Elias",
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "docs": "Docs"
   }
 }

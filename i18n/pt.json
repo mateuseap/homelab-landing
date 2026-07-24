@@ -1,40 +1,40 @@
 {
-  "skip": "Pular para o conteudo",
+  "skip": "Pular para o conteúdo",
   "hero": {
     "eyebrow": "HomeLab GitOps",
     "title": "Um VPS, declarado no git.",
-    "lead": "Uma plataforma Kubernetes GitOps rodando aplicacoes de producao reais em um unico no de 1 vCPU / 4 GB. Tudo e declarado em um repositorio; o ArgoCD mantem o cluster igual a ele.",
-    "repo": "Ver o repositorio",
+    "lead": "Uma plataforma Kubernetes GitOps rodando aplicações de produção reais em um único nó de 1 vCPU / 4 GB. Tudo é declarado em um repositório; o ArgoCD observa e mantém o cluster autocurado, sempre igual a ele.",
+    "repo": "Ver o repositório",
     "argo": "ArgoCD",
     "grafana": "Grafana",
-    "s1": "no unico",
+    "s1": "nó único",
     "s2": "GitOps",
-    "s3": "apps de producao",
+    "s3": "apps de produção",
     "s4": "declarativo"
   },
   "arch": {
     "title": "Arquitetura",
-    "lead": "Fazer merge no repositorio git e a unica acao de deploy. O ArgoCD reconcilia o cluster; o Traefik encerra o TLS e roteia cada hostname; o cert-manager emite certificados automaticamente."
+    "lead": "Fazer merge no repositório git é a única ação de deploy. O ArgoCD observa o repositório e autocura o cluster para igualá-lo; o Traefik encerra o TLS e roteia cada hostname; o cert-manager emite certificados automaticamente."
   },
   "infra": {
     "title": "Infraestrutura",
-    "c1t": "k3s de no unico",
-    "c1d": "Kubernetes leve com Traefik, CoreDNS e armazenamento local-path em um binario. Sem etcd, estado em sqlite.",
-    "c2t": "Host reforcado",
-    "c2d": "SSH apenas por chave, fail2ban, node-exporter atras de firewall e 2 GB de swap. O reforco do host faz parte do script de bootstrap.",
-    "c3t": "Reproduzivel",
-    "c3d": "Um script transforma um VPS novo na plataforma completa. Migrar de maquina leva cerca de trinta minutos."
+    "c1t": "k3s de nó único",
+    "c1d": "Kubernetes leve com Traefik, CoreDNS e armazenamento local-path em um binário. Sem etcd, estado em sqlite.",
+    "c2t": "Host reforçado",
+    "c2d": "SSH apenas por chave, fail2ban, node-exporter atrás de firewall e 2 GB de swap. O reforço do host faz parte do script de bootstrap.",
+    "c3t": "Reproduzível",
+    "c3d": "Um script transforma um VPS novo na plataforma completa. Migrar de máquina leva cerca de trinta minutos."
   },
   "tech": {
     "title": "Tecnologias",
-    "lead": "Cada camada e open source e declarada no repositorio.",
+    "lead": "Cada camada é open source e declarada no repositório.",
     "items": {
       "k3s": "Kubernetes leve",
       "argocd": "Motor GitOps",
-      "certmanager": "TLS automatico",
+      "certmanager": "TLS automático",
       "sealed": "Segredos cifrados no git",
       "traefik": "Ingress e roteamento",
-      "prometheus": "Metricas e coleta",
+      "prometheus": "Métricas e coleta",
       "grafana": "Dashboards",
       "r2": "Armazenamento de backup",
       "docker": "Imagens de container",
@@ -44,25 +44,26 @@
     }
   },
   "svc": {
-    "title": "Servicos rodando nela",
-    "chess": "Xadrez multijogador em tempo real com analise do Stockfish e ratings Glicko-2.",
+    "title": "Serviços rodando nela",
+    "chess": "Xadrez multijogador em tempo real com análise do Stockfish e ratings Glicko-2.",
     "pixel": "Um mundo 2D estilo Gather com movimento, chat por proximidade e voz por proximidade.",
     "argo": "O plano de controle GitOps e um painel ao vivo de cada app implantado.",
-    "grafana": "O painel HomeLab Overview curado, da saude do no as metricas por app."
+    "grafana": "O painel HomeLab Overview curado, da saúde do nó às métricas por app."
   },
   "mon": {
     "title": "Monitoramento e rede",
     "m1t": "Monitoramento",
-    "m1d": "Um painel do Grafana curado em quatro secoes (VPS, Kubernetes, ChessKernel, PixelHub). Ambos os servidores expoem metricas internas ao cluster, coletadas pelo Prometheus a cada minuto.",
+    "m1d": "Um painel do Grafana curado em quatro seções (VPS, Kubernetes, ChessKernel, PixelHub). Ambos os servidores expõem métricas internas ao cluster, coletadas pelo Prometheus a cada minuto.",
     "m2t": "Rede",
-    "m2d": "Um unico registro DNS curinga atende qualquer numero de hosts. O Traefik roteia por hostname (SNI) e o cert-manager emite um certificado Let's Encrypt por host automaticamente.",
-    "m3t": "Seguranca",
-    "m3d": "Os segredos sao selados e seguros em um repositorio publico, o TLS esta em todo lugar e os endpoints de metricas nunca ficam expostos publicamente.",
+    "m2d": "Um único registro DNS curinga atende qualquer número de hosts. O Traefik roteia por hostname (SNI) e o cert-manager emite um certificado Let's Encrypt por host automaticamente.",
+    "m3t": "Segurança",
+    "m3d": "Os segredos são selados e seguros em um repositório público, o TLS está em todo lugar e os endpoints de métricas nunca ficam expostos publicamente.",
     "m4t": "Backups",
-    "m4d": "Um dump noturno do banco para o Cloudflare R2 com limites que o mantem dentro do plano gratuito."
+    "m4d": "Um dump noturno do banco para o Cloudflare R2 com limites que o mantêm dentro do plano gratuito."
   },
   "footer": {
-    "by": "Construido e operado por Mateus Elias",
-    "portfolio": "Portfolio"
+    "by": "Construído e operado por Mateus Elias",
+    "portfolio": "Portfólio",
+    "docs": "Documentação"
   }
 }

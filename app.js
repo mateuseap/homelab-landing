@@ -41,39 +41,79 @@
     }).join("");
   }
 
-  /* Architecture diagram: inline SVG, themed via CSS custom properties. */
+  /* Architecture diagram: inline SVG, themed via CSS custom properties.
+     Mirrors the real mateuseap/homelab topology: GitHub is the source of
+     truth, ArgoCD reconciles it onto a single k3s node, Traefik fronts every
+     app, GHCR supplies images, and a nightly CronJob ships backups to R2. */
   function renderDiagram() {
     var host = document.getElementById("diagram");
     if (!host) return;
-    function box(x, y, w, h, label, sub, accent) {
-      var fill = accent ? "var(--accent)" : "var(--bg)";
-      var text = accent ? "#ffffff" : "var(--ink)";
-      var subc = accent ? "rgba(255,255,255,0.85)" : "var(--muted)";
-      var s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="10" fill="' + fill + '" stroke="var(--line)"/>';
-      s += '<text x="' + (x + w / 2) + '" y="' + (y + (sub ? h / 2 - 3 : h / 2 + 4)) + '" text-anchor="middle" font-family="var(--mono)" font-size="12" font-weight="700" fill="' + text + '">' + label + "</text>";
-      if (sub) s += '<text x="' + (x + w / 2) + '" y="' + (y + h / 2 + 14) + '" text-anchor="middle" font-family="var(--sans)" font-size="10" fill="' + subc + '">' + sub + "</text>";
+
+    function box(x, y, w, h, label, sub, variant) {
+      var fill = variant === "accent" ? "var(--accent)" : variant === "dim" ? "var(--surface)" : "var(--bg)";
+      var text = variant === "accent" ? "#ffffff" : "var(--ink)";
+      var subc = variant === "accent" ? "rgba(255,255,255,0.85)" : "var(--muted)";
+      var s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="9" fill="' + fill + '" stroke="var(--line)"/>';
+      s += '<text x="' + (x + w / 2) + '" y="' + (y + (sub ? h / 2 - 4 : h / 2 + 4)) + '" text-anchor="middle" font-family="var(--mono)" font-size="11.5" font-weight="700" fill="' + text + '">' + label + "</text>";
+      if (sub) s += '<text x="' + (x + w / 2) + '" y="' + (y + h / 2 + 12) + '" text-anchor="middle" font-family="var(--sans)" font-size="9.5" fill="' + subc + '">' + sub + "</text>";
       return s;
     }
-    function arrow(x1, y1, x2, y2) {
-      return '<line x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '" stroke="var(--accent)" stroke-width="1.5" marker-end="url(#a)"/>';
+    function arrow(x1, y1, x2, y2, dashed, marker) {
+      var d = dashed ? ' stroke-dasharray="3 3"' : "";
+      return '<line x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '" stroke="var(--accent-2)" stroke-width="1.4"' + d + ' marker-end="url(#' + (marker || "a") + ')"/>';
     }
-    var svg = '<svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Architecture diagram">';
-    svg += '<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0l6 3-6 3z" fill="var(--accent)"/></marker></defs>';
-    svg += box(20, 130, 150, 56, "GitHub", "HomeLab repo");
-    svg += box(250, 130, 130, 56, "ArgoCD", "reconciles", true);
-    svg += '<rect x="430" y="30" width="270" height="260" rx="14" fill="none" stroke="var(--line)" stroke-dasharray="4 4"/>';
-    svg += '<text x="565" y="24" text-anchor="middle" font-family="var(--mono)" font-size="11" fill="var(--muted)">k3s node</text>';
-    svg += box(450, 48, 110, 46, "Traefik", "TLS + routing");
-    svg += box(580, 48, 100, 46, "cert-manager");
-    svg += box(450, 118, 110, 46, "ChessKernel");
-    svg += box(580, 118, 100, 46, "PixelHub");
-    svg += box(450, 188, 110, 46, "Prometheus");
-    svg += box(580, 188, 100, 46, "Grafana");
-    svg += box(450, 252, 230, 32, "sealed-secrets, backups to R2");
-    svg += arrow(170, 158, 248, 158);
-    svg += arrow(380, 158, 448, 141);
-    svg += arrow(380, 150, 448, 71);
-    svg += arrow(380, 166, 448, 211);
+    function label(x, y, text, anchor) {
+      return '<text x="' + x + '" y="' + y + '" text-anchor="' + (anchor || "middle") + '" font-family="var(--sans)" font-size="9" fill="var(--muted)">' + text + "</text>";
+    }
+
+    var svg = '<svg viewBox="0 0 780 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Architecture diagram">';
+    svg += '<defs>' +
+      '<marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0l6 3-6 3z" fill="var(--accent-2)"/></marker>' +
+      '<marker id="b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0l6 3-6 3z" fill="var(--accent)"/></marker>' +
+      "</defs>";
+
+    /* External actors: source repo, browsers, image registry, backup store. */
+    svg += box(14, 26, 148, 52, "GitHub", "mateuseap/homelab", "dim");
+    svg += box(14, 334, 148, 52, "Browsers", "*.lab.mateuseap.com", "dim");
+    svg += box(618, 14, 148, 46, "GHCR", "container images", "dim");
+    svg += box(618, 350, 148, 46, "Cloudflare R2", "14-day backups", "dim");
+
+    /* GitOps engine, sitting between the repo and the cluster. */
+    svg += box(14, 180, 148, 56, "ArgoCD", "sync · self-heal", "accent");
+
+    /* k3s node boundary. */
+    svg += '<rect x="206" y="10" width="380" height="400" rx="14" fill="none" stroke="var(--line)" stroke-dasharray="4 4"/>';
+    svg += '<text x="396" y="30" text-anchor="middle" font-family="var(--mono)" font-size="11" font-weight="700" fill="var(--muted)">k3s node · 1 vCPU / 4 GB</text>';
+
+    var c1 = 224, c2 = 402, cw = 164;
+    svg += box(c1, 46, cw, 46, "Traefik", "TLS · SNI routing");
+    svg += box(c2, 46, cw, 46, "cert-manager", "Let's Encrypt");
+    svg += box(c1, 108, cw, 46, "ChessKernel", "chess + postgres + redis");
+    svg += box(c2, 108, cw, 46, "PixelHub", "+ LiveKit voice");
+    svg += box(c1, 170, cw, 46, "Prometheus", "scrapes /metrics");
+    svg += box(c2, 170, cw, 46, "Grafana", "HomeLab Overview");
+    svg += box(c1, 232, cw, 46, "sealed-secrets", "decrypts in-cluster");
+    svg += box(c2, 232, cw, 46, "CronJob", "nightly pg_dump");
+
+    /* GitHub -> ArgoCD (poll). */
+    svg += arrow(88, 78, 88, 178, false, "b");
+    svg += label(126, 132, "poll", "middle");
+    /* ArgoCD -> cluster (applies manifests). */
+    svg += arrow(162, 200, 222, 130, false, "b");
+    svg += label(197, 158, "apply", "middle");
+    /* Browsers -> Traefik, routed around the ArgoCD box as an elbow connector. */
+    svg += '<polyline points="162,360 190,360 190,69 222,69" fill="none" stroke="var(--accent-2)" stroke-width="1.4" marker-end="url(#a)"/>';
+    svg += label(178, 300, "HTTPS", "middle");
+    /* Traefik / cert-manager -> apps below them. */
+    svg += arrow(306, 92, 306, 106, false, "a");
+    svg += arrow(484, 92, 484, 106, false, "a");
+    /* GHCR -> cluster (dashed, image pulls for ChessKernel + PixelHub). */
+    svg += arrow(618, 37, 566, 69, true, "a");
+    svg += label(662, 78, "image pulls", "middle");
+    /* CronJob -> R2 (nightly backup). */
+    svg += arrow(566, 255, 618, 373, false, "a");
+    svg += label(662, 340, "nightly", "middle");
+
     svg += "</svg>";
     host.innerHTML = svg;
   }
