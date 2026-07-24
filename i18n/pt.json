@@ -1,7 +1,7 @@
 {
   "skip": "Pular para o conteudo",
   "hero": {
-    "eyebrow": "Homelab GitOps",
+    "eyebrow": "HomeLab GitOps",
     "title": "Um VPS, declarado no git.",
     "lead": "Uma plataforma Kubernetes GitOps rodando aplicacoes de producao reais em um unico no de 1 vCPU / 4 GB. Tudo e declarado em um repositorio; o ArgoCD mantem o cluster igual a ele.",
     "repo": "Ver o repositorio",
@@ -48,7 +48,7 @@
     "chess": "Xadrez multijogador em tempo real com analise do Stockfish e ratings Glicko-2.",
     "pixel": "Um mundo 2D estilo Gather com movimento, chat por proximidade e voz por proximidade.",
     "argo": "O plano de controle GitOps e um painel ao vivo de cada app implantado.",
-    "grafana": "O painel Homelab Overview curado, da saude do no as metricas por app."
+    "grafana": "O painel HomeLab Overview curado, da saude do no as metricas por app."
   },
   "mon": {
     "title": "Monitoramento e rede",

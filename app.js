@@ -59,7 +59,7 @@
     }
     var svg = '<svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Architecture diagram">';
     svg += '<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0l6 3-6 3z" fill="var(--accent)"/></marker></defs>';
-    svg += box(20, 130, 150, 56, "GitHub", "homelab repo");
+    svg += box(20, 130, 150, 56, "GitHub", "HomeLab repo");
     svg += box(250, 130, 130, 56, "ArgoCD", "reconciles", true);
     svg += '<rect x="430" y="30" width="270" height="260" rx="14" fill="none" stroke="var(--line)" stroke-dasharray="4 4"/>';
     svg += '<text x="565" y="24" text-anchor="middle" font-family="var(--mono)" font-size="11" fill="var(--muted)">k3s node</text>';
