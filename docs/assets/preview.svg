@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="HomeLab Landing: a browser window showing the site hero and a miniature architecture diagram">
+  <defs>
+    <clipPath id="card-clip"><rect x="1" y="1" width="718" height="458" rx="14"/></clipPath>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#131d1a" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L6 3 L0 6 z" fill="#5ba3b0"/>
+    </marker>
+  </defs>
+
+  <g filter="url(#card-shadow)">
+    <rect x="1" y="1" width="718" height="458" rx="14" fill="#ffffff" stroke="#dfe7e3"/>
+  </g>
+
+  <g clip-path="url(#card-clip)">
+    <rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+
+    <!-- browser chrome -->
+    <rect x="0" y="0" width="720" height="36" fill="#f7f9f8"/>
+    <line x1="0" y1="36" x2="720" y2="36" stroke="#dfe7e3"/>
+    <circle cx="20" cy="18" r="5" fill="#dfe7e3"/>
+    <circle cx="36" cy="18" r="5" fill="#dfe7e3"/>
+    <circle cx="52" cy="18" r="5" fill="#dfe7e3"/>
+    <rect x="260" y="8" width="200" height="20" rx="10" fill="#ffffff" stroke="#dfe7e3"/>
+    <path d="M300 15.5 a2.5 2.5 0 0 1 5 0 v1.7 h0.6 a1 1 0 0 1 1 1 v3.3 a1 1 0 0 1 -1 1 h-6.2 a1 1 0 0 1 -1 -1 v-3.3 a1 1 0 0 1 1 -1 h0.6 z" fill="none" stroke="#5c6b66" stroke-width="0.9"/>
+    <text x="312" y="21.5" font-family="'Geist Mono', ui-monospace, monospace" font-size="9.5" fill="#5c6b66">homelab.mateuseap.com</text>
+
+    <!-- site header -->
+    <g transform="translate(32,52) scale(0.34375)">
+      <rect width="64" height="64" rx="15" fill="#0f7a63"/>
+      <line x1="32" y1="25" x2="18" y2="46" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/>
+      <line x1="32" y1="25" x2="46" y2="46" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/>
+      <circle cx="18" cy="46" r="5.5" fill="#fff"/>
+      <circle cx="46" cy="46" r="5.5" fill="#fff"/>
+      <circle cx="32" cy="24" r="8.5" fill="#fff"/>
+    </g>
+    <text x="60" y="67" font-family="'Geist Mono', ui-monospace, monospace" font-size="13" font-weight="700" fill="#131d1a">HomeLab</text>
+
+    <rect x="578" y="52" width="78" height="24" rx="8" fill="#ffffff" stroke="#dfe7e3"/>
+    <rect x="582" y="56" width="23" height="16" rx="5" fill="#0f7a63"/>
+    <text x="593.5" y="67" text-anchor="middle" font-family="'Geist Mono', ui-monospace, monospace" font-size="9" font-weight="700" fill="#ffffff">EN</text>
+    <text x="618" y="67" text-anchor="middle" font-family="'Geist Mono', ui-monospace, monospace" font-size="9" font-weight="600" fill="#5c6b66">PT</text>
+    <text x="643" y="67" text-anchor="middle" font-family="'Geist Mono', ui-monospace, monospace" font-size="9" font-weight="600" fill="#5c6b66">ES</text>
+
+    <circle cx="676" cy="64" r="12" fill="#ffffff" stroke="#dfe7e3"/>
+    <path d="M681.2 59.6a5 5 0 1 0 0.1 8.9 6.2 6.2 0 0 1 -0.1 -8.9z" fill="none" stroke="#5c6b66" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <line x1="32" y1="86" x2="688" y2="86" stroke="#dfe7e3"/>
+
+    <!-- hero -->
+    <text x="32" y="106" font-family="'Geist Mono', ui-monospace, monospace" font-size="9.5" font-weight="600" letter-spacing="1.6" fill="#0f7a63">GITOPS HOMELAB</text>
+    <text x="31" y="134" font-family="'Geist', system-ui, sans-serif" font-size="26" font-weight="700" letter-spacing="-0.5" fill="#131d1a">One VPS,</text>
+    <text x="31" y="164" font-family="'Geist', system-ui, sans-serif" font-size="26" font-weight="700" letter-spacing="-0.5" fill="#131d1a">declared in git.</text>
+    <text x="32" y="182" font-family="'Geist', system-ui, sans-serif" font-size="11" fill="#5c6b66">A GitOps Kubernetes platform running real production apps</text>
+    <text x="32" y="196" font-family="'Geist', system-ui, sans-serif" font-size="11" fill="#5c6b66">on a single 1 vCPU / 4 GB node.</text>
+
+    <!-- CTA row -->
+    <rect x="32" y="208" width="122" height="26" rx="9" fill="#0f7a63"/>
+    <text x="93" y="225" text-anchor="middle" font-family="'Geist', system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#ffffff">View the repo</text>
+    <rect x="164" y="208" width="76" height="26" rx="9" fill="#f7f9f8" stroke="#dfe7e3"/>
+    <text x="202" y="225" text-anchor="middle" font-family="'Geist', system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#131d1a">ArgoCD</text>
+    <rect x="250" y="208" width="78" height="26" rx="9" fill="#f7f9f8" stroke="#dfe7e3"/>
+    <text x="289" y="225" text-anchor="middle" font-family="'Geist', system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#131d1a">Grafana</text>
+
+    <!-- stat row -->
+    <line x1="32" y1="248" x2="688" y2="248" stroke="#dfe7e3"/>
+    <text x="32" y="266" font-family="'Geist', system-ui, sans-serif" font-size="13" font-weight="700" fill="#131d1a">1 vCPU / 4GB</text>
+    <text x="32" y="280" font-family="'Geist', system-ui, sans-serif" font-size="8.5" fill="#5c6b66">single node</text>
+    <text x="196" y="266" font-family="'Geist', system-ui, sans-serif" font-size="13" font-weight="700" fill="#131d1a">k3s + ArgoCD</text>
+    <text x="196" y="280" font-family="'Geist', system-ui, sans-serif" font-size="8.5" fill="#5c6b66">GitOps</text>
+    <text x="360" y="266" font-family="'Geist', system-ui, sans-serif" font-size="13" font-weight="700" fill="#131d1a">3</text>
+    <text x="360" y="280" font-family="'Geist', system-ui, sans-serif" font-size="8.5" fill="#5c6b66">production apps</text>
+    <text x="524" y="266" font-family="'Geist', system-ui, sans-serif" font-size="13" font-weight="700" fill="#131d1a">100%</text>
+    <text x="524" y="280" font-family="'Geist', system-ui, sans-serif" font-size="8.5" fill="#5c6b66">declarative</text>
+
+    <line x1="32" y1="296" x2="688" y2="296" stroke="#dfe7e3"/>
+
+    <!-- architecture teaser -->
+    <text x="32" y="314" font-family="'Geist Mono', ui-monospace, monospace" font-size="9.5" font-weight="600" letter-spacing="1.6" fill="#0f7a63">ARCHITECTURE</text>
+
+    <rect x="32" y="322" width="656" height="118" rx="12" fill="#f7f9f8" stroke="#dfe7e3"/>
+
+    <rect x="44" y="368" width="70" height="26" rx="7" fill="#ffffff" stroke="#dfe7e3"/>
+    <text x="79" y="385" text-anchor="middle" font-family="'Geist Mono', ui-monospace, monospace" font-size="9.5" font-weight="700" fill="#131d1a">GitHub</text>
+
+    <rect x="140" y="368" width="70" height="26" rx="7" fill="#0f7a63"/>
+    <text x="175" y="385" text-anchor="middle" font-family="'Geist Mono', ui-monospace, monospace" font-size="9.5" font-weight="700" fill="#ffffff">ArgoCD</text>
+
+    <line x1="114" y1="381" x2="136" y2="381" stroke="#5ba3b0" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+    <rect x="234" y="336" width="430" height="88" rx="10" fill="none" stroke="#c7d1cc" stroke-dasharray="4 3"/>
+    <text x="246" y="350" font-family="'Geist Mono', ui-monospace, monospace" font-size="8" font-weight="600" fill="#5c6b66">K3S · 1 vCPU / 4GB</text>
+
+    <rect x="246" y="358" width="64" height="22" rx="6" fill="#ffffff" stroke="#dfe7e3"/>
+    <text x="278" y="372.5" text-anchor="middle" font-family="'Geist Mono', ui-monospace, monospace" font-size="8.5" font-weight="700" fill="#131d1a">Traefik</text>
+
+    <rect x="318" y="358" width="88" height="22" rx="6" fill="#ffffff" stroke="#dfe7e3"/>
+    <text x="362" y="372.5" text-anchor="middle" font-family="'Geist Mono', ui-monospace, monospace" font-size="8.5" font-weight="700" fill="#131d1a">cert-manager</text>
+
+    <rect x="246" y="392" width="86" height="22" rx="6" fill="#ffffff" stroke="#dfe7e3"/>
+    <text x="289" y="406.5" text-anchor="middle" font-family="'Geist Mono', ui-monospace, monospace" font-size="8.5" font-weight="700" fill="#131d1a">ChessKernel</text>
+
+    <rect x="340" y="392" width="74" height="22" rx="6" fill="#ffffff" stroke="#dfe7e3"/>
+    <text x="377" y="406.5" text-anchor="middle" font-family="'Geist Mono', ui-monospace, monospace" font-size="8.5" font-weight="700" fill="#131d1a">PixelHub</text>
+
+    <rect x="422" y="392" width="70" height="22" rx="6" fill="#ffffff" stroke="#dfe7e3"/>
+    <text x="457" y="406.5" text-anchor="middle" font-family="'Geist Mono', ui-monospace, monospace" font-size="8.5" font-weight="700" fill="#131d1a">Grafana</text>
+
+    <rect x="500" y="392" width="82" height="22" rx="6" fill="#ffffff" stroke="#dfe7e3"/>
+    <text x="541" y="406.5" text-anchor="middle" font-family="'Geist Mono', ui-monospace, monospace" font-size="8.5" font-weight="700" fill="#131d1a">Prometheus</text>
+
+    <line x1="210" y1="381" x2="240" y2="369" stroke="#5ba3b0" stroke-width="1.4" marker-end="url(#arrow)"/>
+    <path d="M278 380 L278 386 L541 386" fill="none" stroke="#5ba3b0" stroke-width="1.3"/>
+    <line x1="289" y1="386" x2="289" y2="390" stroke="#5ba3b0" stroke-width="1.3" marker-end="url(#arrow)"/>
+    <line x1="377" y1="386" x2="377" y2="390" stroke="#5ba3b0" stroke-width="1.3" marker-end="url(#arrow)"/>
+    <line x1="457" y1="386" x2="457" y2="390" stroke="#5ba3b0" stroke-width="1.3" marker-end="url(#arrow)"/>
+    <line x1="541" y1="386" x2="541" y2="390" stroke="#5ba3b0" stroke-width="1.3" marker-end="url(#arrow)"/>
+  </g>
+</svg>
