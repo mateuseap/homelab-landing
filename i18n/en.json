@@ -47,7 +47,7 @@
     "title": "Services running on it",
     "chess": "Real-time multiplayer chess with Stockfish analysis and Glicko-2 ratings.",
     "pixel": "A Gather-style 2D world with movement, proximity chat, and proximity voice.",
-    "mixtape": "A password-gated MP3 library with a retro player UI.",
+    "mixtape": "An open MP3 jukebox anyone can browse, play, and add tracks to, with a retro player UI.",
     "argo": "The GitOps control plane and a live dashboard of every deployed app.",
     "grafana": "The curated HomeLab Overview dashboard, node health to per-app metrics."
   },
