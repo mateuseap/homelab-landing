@@ -47,7 +47,7 @@
     "title": "Serviços rodando nela",
     "chess": "Xadrez multijogador em tempo real com análise do Stockfish e ratings Glicko-2.",
     "pixel": "Um mundo 2D estilo Gather com movimento, chat por proximidade e voz por proximidade.",
-    "mixtape": "Uma jukebox de MP3 aberta que qualquer pessoa pode navegar, tocar e adicionar faixas, com um player 3D interativo.",
+    "mixtape": "Uma jukebox de MP3 aberta com equipamento de som 3D interativo (um MP3 de roda de cliques e um CD player) que qualquer pessoa pode navegar, tocar e adicionar faixas.",
     "argo": "O plano de controle GitOps e um painel ao vivo de cada app implantado.",
     "grafana": "O painel HomeLab Overview curado, da saúde do nó às métricas por app."
   },
