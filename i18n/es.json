@@ -47,7 +47,7 @@
     "title": "Servicios que se ejecutan en él",
     "chess": "Ajedrez multijugador en tiempo real con análisis de Stockfish y ratings Glicko-2.",
     "pixel": "Un mundo 2D estilo Gather con movimiento, chat por proximidad y voz por proximidad.",
-    "mixtape": "Una biblioteca de MP3 protegida por contrasena con una interfaz de reproductor retro.",
+    "mixtape": "Una jukebox de MP3 abierta en la que cualquiera puede explorar, reproducir y añadir pistas, con una interfaz de reproductor retro.",
     "argo": "El plano de control GitOps y un panel en vivo de cada app desplegada.",
     "grafana": "El panel HomeLab Overview curado, de la salud del nodo a las métricas por app."
   },
