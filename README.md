@@ -8,6 +8,11 @@ Vanilla static site, served by the HomeLab itself.
 [![Publish Images](https://github.com/mateuseap/homelab-landing/actions/workflows/publish-images.yml/badge.svg)](https://github.com/mateuseap/homelab-landing/actions)
 [![license](https://badgen.net/github/license/mateuseap/homelab-landing?color=5ba3b0)](LICENSE)
 [![stars](https://badgen.net/github/stars/mateuseap/homelab-landing)](https://github.com/mateuseap/homelab-landing/stargazers)
+[![visitors](https://visitor-badge.laobi.icu/badge?page_id=mateuseap.homelab-landing)](https://github.com/mateuseap/homelab-landing)
+
+<br />
+
+<img src="docs/assets/preview.png" width="720" alt="HomeLab Landing: the public showcase site" />
 
 <br />
 
