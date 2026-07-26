@@ -2,7 +2,7 @@
 
 # 🏗 HomeLab Landing
 
-**The public showcase for the HomeLab GitOps platform.**
+**The public showcase for the HomeLab GitOps platform.**  
 Vanilla static site, served by the HomeLab itself.
 
 [![Publish Images](https://github.com/mateuseap/homelab-landing/actions/workflows/publish-images.yml/badge.svg)](https://github.com/mateuseap/homelab-landing/actions)
