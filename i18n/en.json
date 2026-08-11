@@ -48,7 +48,7 @@
     "chess": "Real-time multiplayer chess with Stockfish analysis and Glicko-2 ratings.",
     "pixel": "A Gather-style 2D world with movement, proximity chat, and proximity voice.",
     "mixtape": "An open MP3 jukebox with interactive 3D sound equipment (an MP3 click wheel and a CD player) that anyone can browse, play, and add tracks to.",
-    "sotto": "Real-time live transcription of your microphone, right in the browser, powered by Deepgram streaming.",
+    "sotto": "Live transcription for whatever you're listening to, right in the browser, powered by Deepgram streaming.",
     "9router": "A self-hosted AI gateway that provides rate-limit fallback for Claude Code.",
     "argo": "The GitOps control plane and a live dashboard of every deployed app.",
     "grafana": "The curated HomeLab Overview dashboard, node health to per-app metrics."
