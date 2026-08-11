@@ -56,7 +56,7 @@
   "mon": {
     "title": "Monitoramento e rede",
     "m1t": "Monitoramento",
-    "m1d": "Um painel do Grafana curado em quatro seções (VPS, Kubernetes, ChessKernel, PixelHub). Ambos os servidores expõem métricas internas ao cluster, coletadas pelo Prometheus a cada minuto.",
+    "m1d": "Um painel do Grafana curado em seis seções (VPS, Kubernetes, ChessKernel, PixelHub, Sotto, 9Router). Ambos os servidores expõem métricas internas ao cluster, coletadas pelo Prometheus a cada minuto.",
     "m2t": "Rede",
     "m2d": "Um único registro DNS curinga atende qualquer número de hosts. O Traefik roteia por hostname (SNI) e o cert-manager emite um certificado Let's Encrypt por host automaticamente.",
     "m3t": "Segurança",
