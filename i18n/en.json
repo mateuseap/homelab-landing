@@ -56,7 +56,7 @@
   "mon": {
     "title": "Monitoring and networking",
     "m1t": "Monitoring",
-    "m1d": "One curated Grafana dashboard in four sections (VPS, Kubernetes, ChessKernel, PixelHub). Both app servers expose cluster-internal metrics scraped by Prometheus every minute.",
+    "m1d": "One curated Grafana dashboard in six sections (VPS, Kubernetes, ChessKernel, PixelHub, Sotto, 9Router). Both app servers expose cluster-internal metrics scraped by Prometheus every minute.",
     "m2t": "Networking",
     "m2d": "One wildcard DNS record serves any number of hosts. Traefik routes by hostname (SNI) and cert-manager issues a Let's Encrypt certificate per host automatically.",
     "m3t": "Security",
