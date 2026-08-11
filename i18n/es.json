@@ -56,7 +56,7 @@
   "mon": {
     "title": "Monitoreo y red",
     "m1t": "Monitoreo",
-    "m1d": "Un panel de Grafana curado en cuatro secciones (VPS, Kubernetes, ChessKernel, PixelHub). Ambos servidores exponen métricas internas del clúster, recolectadas por Prometheus cada minuto.",
+    "m1d": "Un panel de Grafana curado en seis secciones (VPS, Kubernetes, ChessKernel, PixelHub, Sotto, 9Router). Ambos servidores exponen métricas internas del clúster, recolectadas por Prometheus cada minuto.",
     "m2t": "Red",
     "m2d": "Un solo registro DNS comodín sirve cualquier cantidad de hosts. Traefik enruta por hostname (SNI) y cert-manager emite un certificado Let's Encrypt por host automáticamente.",
     "m3t": "Seguridad",
