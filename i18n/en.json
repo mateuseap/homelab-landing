@@ -44,19 +44,19 @@
     }
   },
   "svc": {
-    "title": "Services running on it",
+    "title": "Applications and platform services",
     "chess": "Real-time multiplayer chess with Stockfish analysis and Glicko-2 ratings.",
     "pixel": "A Gather-style 2D world with movement, proximity chat, and proximity voice.",
     "mixtape": "An open MP3 jukebox with interactive 3D sound equipment (an MP3 click wheel and a CD player) that anyone can browse, play, and add tracks to.",
-    "sotto": "Real-time live transcription of your microphone, right in the browser, powered by Deepgram streaming.",
-    "9router": "A self-hosted AI gateway that provides rate-limit fallback for Claude Code.",
+    "sotto": "Live English and Brazilian Portuguese transcription from browser tab or microphone audio, with AI-generated session summaries.",
+    "9router": "A self-hosted AI gateway providing model routing and rate-limit fallback for Claude Code, also used for Sotto summaries.",
     "argo": "The GitOps control plane and a live dashboard of every deployed app.",
     "grafana": "The curated HomeLab Overview dashboard, node health to per-app metrics."
   },
   "mon": {
     "title": "Monitoring and networking",
     "m1t": "Monitoring",
-    "m1d": "One curated Grafana dashboard in six sections (VPS, Kubernetes, ChessKernel, PixelHub, Sotto, 9Router). Both app servers expose cluster-internal metrics scraped by Prometheus every minute.",
+    "m1d": "One curated Grafana dashboard covers VPS and Kubernetes health, ChessKernel and PixelHub activity, and Sotto and 9Router resource usage. Prometheus scrapes cluster-internal ChessKernel, PixelHub, and LiveKit metrics every minute.",
     "m2t": "Networking",
     "m2d": "One wildcard DNS record serves any number of hosts. Traefik routes by hostname (SNI) and cert-manager issues a Let's Encrypt certificate per host automatically.",
     "m3t": "Security",

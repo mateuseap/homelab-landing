@@ -44,19 +44,19 @@
     }
   },
   "svc": {
-    "title": "Serviços rodando nela",
+    "title": "Aplicações e serviços da plataforma",
     "chess": "Xadrez multijogador em tempo real com análise do Stockfish e ratings Glicko-2.",
     "pixel": "Um mundo 2D estilo Gather com movimento, chat por proximidade e voz por proximidade.",
     "mixtape": "Uma jukebox de MP3 aberta com equipamento de som 3D interativo (um MP3 de roda de cliques e um CD player) que qualquer pessoa pode navegar, tocar e adicionar faixas.",
-    "sotto": "Transcrição ao vivo em tempo real do microfone, direto no navegador, com streaming do Deepgram.",
-    "9router": "Um gateway de IA autogerenciado que oferece fallback de limite de taxa para o Claude Code.",
+    "sotto": "Transcrição ao vivo em inglês e português brasileiro do áudio de abas do navegador ou do microfone, com resumos de sessão gerados por IA.",
+    "9router": "Um gateway de IA auto-hospedado que roteia modelos e oferece contingência quando o Claude Code atinge limites de uso, também usado nos resumos do Sotto.",
     "argo": "O plano de controle GitOps e um painel ao vivo de cada app implantado.",
     "grafana": "O painel HomeLab Overview curado, da saúde do nó às métricas por app."
   },
   "mon": {
     "title": "Monitoramento e rede",
     "m1t": "Monitoramento",
-    "m1d": "Um painel do Grafana curado em seis seções (VPS, Kubernetes, ChessKernel, PixelHub, Sotto, 9Router). Ambos os servidores expõem métricas internas ao cluster, coletadas pelo Prometheus a cada minuto.",
+    "m1d": "Um painel curado do Grafana cobre a saúde do VPS e do Kubernetes, a atividade do ChessKernel e do PixelHub e o uso de recursos do Sotto e do 9Router. O Prometheus coleta a cada minuto métricas internas ao cluster do ChessKernel, PixelHub e LiveKit.",
     "m2t": "Rede",
     "m2d": "Um único registro DNS curinga atende qualquer número de hosts. O Traefik roteia por hostname (SNI) e o cert-manager emite um certificado Let's Encrypt por host automaticamente.",
     "m3t": "Segurança",
