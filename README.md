@@ -22,7 +22,7 @@ Vanilla static site, served by the HomeLab itself.
 
 A single-page engineering showcase for the [HomeLab](https://github.com/mateuseap/homelab) platform, live at [homelab.mateuseap.com](https://homelab.mateuseap.com). It presents the infrastructure, technologies, services, monitoring, networking, and security of a GitOps Kubernetes platform running on one small VPS.
 
-It is a plain HTML, CSS, and JavaScript site with no build step and no framework. Internationalization (English, Portuguese, Spanish) is a small set of JSON files swapped at runtime; light and dark themes are CSS custom properties toggled on the root element.
+It is a plain HTML, CSS, and JavaScript site with no build step and no framework. Internationalization (English, Brazilian Portuguese, Spanish) is a small set of JSON files swapped at runtime; light and dark themes are CSS custom properties toggled on the root element.
 
 ## Hosting
 

@@ -44,19 +44,19 @@
     }
   },
   "svc": {
-    "title": "Servicios que se ejecutan en él",
+    "title": "Aplicaciones y servicios de la plataforma",
     "chess": "Ajedrez multijugador en tiempo real con análisis de Stockfish y ratings Glicko-2.",
     "pixel": "Un mundo 2D estilo Gather con movimiento, chat por proximidad y voz por proximidad.",
     "mixtape": "Una jukebox de MP3 abierta con equipo de sonido 3D interactivo (un reproductor MP3 de rueda de clics y un reproductor de CD) que cualquiera puede explorar, reproducir y añadir pistas.",
-    "sotto": "Transcripción en vivo para lo que esté escuchando, directamente en el navegador, con streaming Deepgram.",
-    "9router": "Una puerta de enlace de IA autoalojada que ofrece respaldo ante límites de tasa para Claude Code.",
+    "sotto": "Transcripción en vivo en inglés y portugués brasileño del audio de pestañas del navegador o del micrófono, con resúmenes de sesión generados por IA.",
+    "9router": "Una puerta de enlace de IA autoalojada que enruta modelos y ofrece respaldo cuando Claude Code alcanza límites de uso, también utilizada para los resúmenes de Sotto.",
     "argo": "El plano de control GitOps y un panel en vivo de cada app desplegada.",
     "grafana": "El panel HomeLab Overview curado, de la salud del nodo a las métricas por app."
   },
   "mon": {
     "title": "Monitoreo y red",
     "m1t": "Monitoreo",
-    "m1d": "Un panel de Grafana curado en seis secciones (VPS, Kubernetes, ChessKernel, PixelHub, Sotto, 9Router). Ambos servidores exponen métricas internas del clúster, recolectadas por Prometheus cada minuto.",
+    "m1d": "Un panel curado de Grafana cubre la salud del VPS y Kubernetes, la actividad de ChessKernel y PixelHub y el uso de recursos de Sotto y 9Router. Prometheus recopila cada minuto métricas internas del clúster de ChessKernel, PixelHub y LiveKit.",
     "m2t": "Red",
     "m2d": "Un solo registro DNS comodín sirve cualquier cantidad de hosts. Traefik enruta por hostname (SNI) y cert-manager emite un certificado Let's Encrypt por host automáticamente.",
     "m3t": "Seguridad",
