@@ -134,13 +134,13 @@
       </section>
 
       <section class="reveal" id="services">
-        <h2 data-i18n="svc.title">Services running on it</h2>
+        <h2 data-i18n="svc.title">Applications and platform services</h2>
         <div class="cards">
           <article class="card svc"><div class="svc-head"><h3>ChessKernel</h3><a href="https://chesskernel.com" target="_blank" rel="noopener" class="ext">chesskernel.com</a></div><p data-i18n="svc.chess">Real-time multiplayer chess with Stockfish analysis and Glicko-2 ratings.</p></article>
           <article class="card svc"><div class="svc-head"><h3>PixelHub</h3><a href="https://pixelhub.lab.mateuseap.com" target="_blank" rel="noopener" class="ext">pixelhub.lab</a></div><p data-i18n="svc.pixel">A Gather-style 2D world with movement, proximity chat, and proximity voice.</p></article>
           <article class="card svc"><div class="svc-head"><h3>Mixtape</h3><a href="https://mixtape.lab.mateuseap.com" target="_blank" rel="noopener" class="ext">mixtape.lab</a></div><p data-i18n="svc.mixtape">An open MP3 jukebox with interactive 3D sound equipment (an MP3 click wheel and a CD player) that anyone can browse, play, and add tracks to.</p></article>
-          <article class="card svc"><div class="svc-head"><h3>Sotto</h3><a href="https://sotto.lab.mateuseap.com" target="_blank" rel="noopener" class="ext">sotto.lab</a></div><p data-i18n="svc.sotto">Live transcription for whatever you're listening to, right in the browser, powered by Deepgram streaming.</p></article>
-          <article class="card svc"><div class="svc-head"><h3>9Router</h3><a href="https://9router.lab.mateuseap.com" target="_blank" rel="noopener" class="ext">9router.lab</a></div><p data-i18n="svc.9router">A self-hosted AI gateway that provides rate-limit fallback for Claude Code.</p></article>
+          <article class="card svc"><div class="svc-head"><h3>Sotto</h3><a href="https://sotto.lab.mateuseap.com" target="_blank" rel="noopener" class="ext">sotto.lab</a></div><p data-i18n="svc.sotto">Live English and Brazilian Portuguese transcription from browser tab or microphone audio, with AI-generated session summaries.</p></article>
+          <article class="card svc"><div class="svc-head"><h3>9Router</h3><a href="https://9router.lab.mateuseap.com" target="_blank" rel="noopener" class="ext">9router.lab</a></div><p data-i18n="svc.9router">A self-hosted AI gateway providing model routing and rate-limit fallback for Claude Code, also used for Sotto summaries.</p></article>
           <article class="card svc"><div class="svc-head"><h3>ArgoCD</h3><a href="https://argo.lab.mateuseap.com" target="_blank" rel="noopener" class="ext">argo.lab</a></div><p data-i18n="svc.argo">The GitOps control plane and a live dashboard of every deployed app.</p></article>
           <article class="card svc"><div class="svc-head"><h3>Grafana</h3><a href="https://grafana.lab.mateuseap.com" target="_blank" rel="noopener" class="ext">grafana.lab</a></div><p data-i18n="svc.grafana">The curated HomeLab Overview dashboard, node health to per-app metrics.</p></article>
         </div>
@@ -149,7 +149,7 @@
       <section class="reveal" id="observability">
         <h2 data-i18n="mon.title">Monitoring and networking</h2>
         <div class="split">
-          <div class="card"><h3 data-i18n="mon.m1t">Monitoring</h3><p data-i18n="mon.m1d">One curated Grafana dashboard in four sections (VPS, Kubernetes, ChessKernel, PixelHub). Both app servers expose cluster-internal metrics scraped by Prometheus every minute.</p></div>
+          <div class="card"><h3 data-i18n="mon.m1t">Monitoring</h3><p data-i18n="mon.m1d">One curated Grafana dashboard covers VPS and Kubernetes health, ChessKernel and PixelHub activity, and Sotto and 9Router resource usage. Prometheus scrapes cluster-internal ChessKernel, PixelHub, and LiveKit metrics every minute.</p></div>
           <div class="card"><h3 data-i18n="mon.m2t">Networking</h3><p data-i18n="mon.m2d">One wildcard DNS record serves any number of hosts. Traefik routes by hostname (SNI) and cert-manager issues a Let's Encrypt certificate per host automatically.</p></div>
           <div class="card"><h3 data-i18n="mon.m3t">Security</h3><p data-i18n="mon.m3d">Secrets are sealed and safe in a public repo, TLS is everywhere, and the metrics endpoints are never exposed publicly.</p></div>
           <div class="card"><h3 data-i18n="mon.m4t">Backups</h3><p data-i18n="mon.m4d">A nightly database dump to Cloudflare R2 with guardrails that keep it inside the free tier.</p></div>
